@@ -41,15 +41,14 @@ $(document).ready(function () {
 
     //animation accueil
     $(".accueil .presentation .bonjour").each(function () {
-        $(this).css({opacity: "0%"});
-        $(this).animate({opacity: "100%"}, 900);
+        $(this).animate({opacity: 1}, 900);
     });
     $(".accueil .presentation .moi").each(function () {
-        $(this).css({position: "relative", opacity: "0%", top: 10}).delay(900);
-        $(this).animate({opacity: "100%", top: 0}, 1000);
+        $(this).css({top: 10}).delay(900);
+        $(this).animate({opacity: 1, top: 0}, 1000);
     });
     $(".accueil .presentation h5").each(function () {
-        $(this).css({position:"relative", opacity: "0%", top: 10}).delay(1200);
+        $(this).css({top: 10}).delay(1200);
         $(this).animate({opacity: "100%", top: 0 }, 1000);
     });
     $(".accueil .presentation button").each(function () {
