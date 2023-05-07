@@ -5,6 +5,17 @@
     --myBg-secondary: #202020;
 }
 
+@font-face {
+    src: url('../fontawesome/webfonts/Alien-Encounters-Solid-Bold.ttf') format("truetype"),
+    url("../fontawesome/webfonts/Alien-Encounters-Solid-Regular.ttf") format("truetype");
+    font-family: "Alien Encounters Solid", sans-serif;
+}
+
+@font-face {
+    src: url("../fontawesome/webfonts/ALIENATO.TTF") format("truetype");
+    font-family: Alienator, sans-serif;
+}
+
 .myBg {
     background: var(--myBg);
 }
