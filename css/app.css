@@ -8,12 +8,12 @@
 @font-face {
     src: url('../fontawesome/webfonts/Alien-Encounters-Solid-Bold.ttf') format("truetype"),
     url("../fontawesome/webfonts/Alien-Encounters-Solid-Regular.ttf") format("truetype");
-    font-family: "Alien Encounters Solid", sans-serif;
+    font-family: "Alien Encounters Solid";
 }
 
 @font-face {
     src: url("../fontawesome/webfonts/ALIENATO.TTF") format("truetype");
-    font-family: Alienator, sans-serif;
+    font-family: "Alienator";
 }
 
 .myBg {
@@ -288,10 +288,18 @@ section .bonjour {
     /*border-radius: 12px;*/
     padding: 0 10px;
     height: 82px;
+    opacity: 0;
+}
+
+.presentation h5 {
+    position: relative;
+    opacity: 0;
 }
 
 .accueil .moi {
+    position: relative;
     font-size: 40px !important;
+    opacity: 0;
 }
 
 /*Corps mode mobile*/
