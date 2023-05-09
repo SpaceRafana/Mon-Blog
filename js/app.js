@@ -47,7 +47,7 @@ $(document).ready(function () {
         $(this).css({top: 10}).delay(900);
         $(this).animate({opacity: 1, top: 0}, 1000);
     });
-    $(".accueil .presentation h5").each(function () {
+    $(".accueil .presentation h2").each(function () {
         $(this).css({top: 10}).delay(1200);
         $(this).animate({opacity: "100%", top: 0 }, 1000);
     });

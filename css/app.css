@@ -80,12 +80,14 @@ header {
 }
 
 .calque {
-    background-color: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(5px);
+    background: url("../img/background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     min-width: 100vw;
     min-height: 100vh;
     padding-top: 210px;
-    padding-bottom: 170px;
+    padding-bottom: 45px;
     position: absolute;
     top: 0;
 }
@@ -102,9 +104,6 @@ header {
     display: flex;
     width: 200px;
     align-items: center;
-    padding-bottom: 10px;
-    /*font-size: xx-large;
-    font-weight: bolder;*/
 }
 
 .nav-links ul {
@@ -194,7 +193,6 @@ header {
         display: flex;
         align-items: center;
         padding-bottom: 3px;
-        font-weight: bolder;
     }
 
     .nav-links ul {
@@ -280,18 +278,17 @@ section .presentation{
 
 section .presentation h1{
     font-family: "Alien Encounters Solid", "sans-serif";
+    line-height: 50px;
     font-size: 65px;
 }
 
 section .bonjour {
-    border-bottom: 4px solid var(--myBg-light);
-    /*border-radius: 12px;*/
-    padding: 0 10px;
-    height: 82px;
+    border-bottom: 3px solid var(--myBg-light);
+    padding-bottom: 5px;
     opacity: 0;
 }
 
-.presentation h5 {
+.presentation h2 {
     position: relative;
     opacity: 0;
 }
@@ -327,21 +324,16 @@ section .bonjour {
 
     section .presentation h1{
         font-family: "Alien Encounters Solid", "sans-serif";
-        font-size: 35px;
+        line-height: normal;
+        font-size: 40px;
     }
 
     .accueil .moi {
-        font-size: 20px !important;
+        font-size: 30px !important;
     }
 
-    section .presentation h5{
-        font-size: 15px;
-    }
-
-    section .bonjour {
-        border-bottom: 3px solid var(--myBg-light);
-        padding: 0 10px;
-        height: 44px;
+    section .presentation h2{
+        font-size: 16px !important;
     }
 
     section .competence h4 {
@@ -533,7 +525,6 @@ section .bonjour {
         margin-left: 0;
     }
     .portfolio .projet .image {
-        border: 1px solid white;
         border-radius: 12px;
         width: 180px;
         height: 100%;
