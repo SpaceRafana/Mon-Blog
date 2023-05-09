@@ -51,7 +51,7 @@ $(document).ready(function () {
         $(this).css({top: 10}).delay(1200);
         $(this).animate({opacity: "100%", top: 0 }, 1000);
     });
-    $(".accueil .presentation button").each(function () {
+    $(".accueil .presentation a").each(function () {
         $(this).delay(2500);
         $(this).animate({opacity: "100%"}, 1000);
     });

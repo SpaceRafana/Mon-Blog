@@ -290,6 +290,7 @@ section .bonjour {
 
 .presentation h2 {
     position: relative;
+    font-weight: lighter !important;
     opacity: 0;
 }
 
@@ -372,9 +373,11 @@ section .bonjour {
     border-radius: 8px;
     padding: 5px 12px;
     transition: 0.5s ease;
+    color: black;
 }
 .myBtn:hover {
     background: var(--myBg);
+    color: white;
 }
 
 .ic-html {
