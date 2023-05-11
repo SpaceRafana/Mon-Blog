@@ -61,8 +61,8 @@ ul {
 
 body {
     display: block;
-
     color: white;
+    background-image: url("../img/space-background.svg");
     background-size: auto 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -79,17 +79,17 @@ header {
     position: absolute;
 }
 
+.g-titre {
+    text-shadow: var(--myBg) 0 2px 5px;
+}
+
 .calque {
-    background: url("../img/background.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    min-width: 100vw;
+    flex-direction: column;
+    width: 100%;
     min-height: 100vh;
     padding-top: 210px;
-    padding-bottom: 45px;
-    position: absolute;
-    top: 0;
+    padding-bottom: 10px;
+    overflow-x: hidden;
 }
 
 .nav-links {
@@ -108,9 +108,9 @@ header {
 
 .nav-links ul {
     display: flex;
-    border: 1px white solid;
-    border-radius: 20px;
-    padding: 10px 20px;
+    border-left: 1px solid var(--myBg-light);
+    border-right: 1px solid var(--myBg-light);
+    padding: 4px 5px;
 }
 
 .nav-links ul li {
@@ -120,7 +120,6 @@ header {
 .nav-links ul li a {
     color: white;
     font-weight: lighter;
-    border-bottom: 3px solid transparent;
     padding: 0 5px;
     transition: border-bottom 0.8s;
 }
@@ -142,18 +141,18 @@ header {
     justify-content: flex-end;
 }
 
-.myBtn-secondary {
+.myBtn-dark {
     background: var(--myBg-secondary);
-    border: none;
+    border: 1px solid var(--myBg-light);
     padding: 6px 20px;
     border-radius: 20px;
     font-weight: 500;
     color: white;
-    transition: color,background-color 0.3s;
 }
-.myBtn-secondary:hover {
-    background: var(--myBg-light);
-    color: var(--myBg-dark);
+.myBtn-dark:hover {
+    border: 1px solid var(--myBg-light);
+    box-shadow: 0 0 8px 1px var(--myBg-light);
+    color: white;
 }
 
 .icon-menu {
@@ -174,6 +173,150 @@ header {
     display: none;
 }
 
+#slide {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    transition: 1.2s cubic-bezier(0.3, 0.47, 0.57, 1.16);
+}
+
+.in {
+    /*position: absolute !important;*/
+    margin-left: -100% !important;
+}
+
+.out {
+    margin-left: 0 !important;
+}
+
+
+#slide .accueil {
+    min-width: 100%;
+}
+
+#slide .portfolio {
+    min-width: 100%;
+}
+
+section {
+    padding: 40px 80px;
+    width: 100%;
+    display: block;
+}
+
+section .presentation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section .presentation h1{
+    font-family: "Alien Encounters Solid", "sans-serif";
+    line-height: 55px;
+    font-size: 65px;
+}
+
+section .bonjour {
+    text-shadow: 0 2px 3px var(--myBg);
+    display: none;
+}
+
+.presentation h2 {
+    position: relative;
+    font-weight: lighter !important;
+    opacity: 0;
+    padding: 0 70px;
+}
+
+.accueil .moi {
+    position: relative;
+    font-size: 40px !important;
+    opacity: 0;
+}
+
+.myBtn {
+    background: var(--myBg-secondary);
+    border: 1px solid var(--myBg-light);
+    border-radius: 50px;
+    padding: 5px 25px;
+    color: white;
+}
+.myBtn:hover {
+    border: 1px solid var(--myBg);
+    box-shadow: 0 0 5px 1px var(--myBg);
+    color: white;
+}
+
+.myBtn:focus {
+    border: 1px solid var(--myBg-light);
+    box-shadow: 0 0 8px 1px var(--myBg-light);
+    color: white;
+}
+
+.btn-white-disable {
+    background: white;
+    color: black;
+    padding: 2px 16px;
+    border-radius: 0 6px 0 6px;
+}
+
+.btn-dark-disable {
+    background: var(--myBg-dark);
+    border: 1px solid var(--myBg-light);
+    color: white;
+    padding: 2px 16px;
+    border-radius: 0 6px 0 6px;
+}
+
+.portfolio section {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+}
+
+.portfolio .retour-accueil {
+    display: flex !important;
+    justify-content: center;
+    padding: 0 80px;
+}
+
+.portfolio .projet {
+    /*border: 1px solid white;*/
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.portfolio .projet .image {
+    border-radius: 12px;
+    width: 280px;
+    height: 100%;
+}
+
+#back-to-top {
+    visibility: hidden;
+    color: white;
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    background: var(--myBg-dark);
+    border: 1px solid var(--myBg-light);
+    padding: 5px 12px;
+    font-size: large;
+    border-radius: 5px;
+    opacity: 0;
+    transition: 0.6s;
+}
+
+.b-show_scrollBut {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+
+/*------------------------------------------------Tout les medias query*-------------------------------------------/
+
 /*Tête mode mobile*/
 @media screen and (max-width: 950px){
     .nav-links {
@@ -184,7 +327,7 @@ header {
         display: flex;
     }
 
-    .li-contact .myBtn-secondary{
+    .li-contact .myBtn-dark{
         padding: 20px;
         border-radius: 12px;
     }
@@ -193,6 +336,10 @@ header {
         display: flex;
         align-items: center;
         padding-bottom: 3px;
+    }
+
+    .nav-links .logo img {
+        width: 110px;
     }
 
     .nav-links ul {
@@ -206,7 +353,7 @@ header {
         border-radius: 12px;
         padding: 10px 20px;
         right: 20px;
-        top: 100px;
+        top: 120px;
         margin-right: -60%;
         transition: 0.5s;
         z-index: 2;
@@ -239,67 +386,6 @@ header {
 
 }
 
-#slide {
-    display: flex;
-    width: 100vw;
-    margin-left: 0;
-    transition: 0.5s cubic-bezier(.53,-0.09,.73,.12);
-}
-
-.in {
-    /*position: absolute !important;*/
-    margin-left: -100% !important;
-}
-
-.out {
-    margin-left: 0 !important;
-}
-
-
-#slide .accueil {
-    min-width: 100vw;
-}
-
-#slide .portfolio {
-    display: none;
-    min-width: 100vw;
-}
-
-section {
-    padding: 40px 80px;
-    min-width: 100%;
-}
-
-section .presentation{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-section .presentation h1{
-    font-family: "Alien Encounters Solid", "sans-serif";
-    line-height: 50px;
-    font-size: 65px;
-}
-
-section .bonjour {
-    border-bottom: 3px solid var(--myBg-light);
-    padding-bottom: 5px;
-    opacity: 0;
-}
-
-.presentation h2 {
-    position: relative;
-    font-weight: lighter !important;
-    opacity: 0;
-}
-
-.accueil .moi {
-    position: relative;
-    font-size: 40px !important;
-    opacity: 0;
-}
-
 /*Corps mode mobile*/
 @media screen and (max-width: 837px){
 
@@ -325,7 +411,7 @@ section .bonjour {
 
     section .presentation h1{
         font-family: "Alien Encounters Solid", "sans-serif";
-        line-height: normal;
+        line-height: 44px !important;
         font-size: 40px;
     }
 
@@ -335,10 +421,15 @@ section .bonjour {
 
     section .presentation h2{
         font-size: 16px !important;
+        padding: 0 30px;
     }
 
     section .competence h4 {
         font-size: 18px;
+    }
+
+    .portfolio .retour-accueil {
+        padding: 30px 0;
     }
 
     @media screen and (min-width: 580px){
@@ -366,161 +457,6 @@ section .bonjour {
     }
 }
 
-.myBtn {
-    opacity: 0;
-    background: var(--myBg-light);
-    border: none;
-    border-radius: 8px;
-    padding: 5px 12px;
-    transition: 0.5s ease;
-    color: black;
-}
-.myBtn:hover {
-    background: var(--myBg);
-    color: white;
-}
-
-.ic-html {
-    text-align: center;
-    background: white;
-    border: none;
-    padding: 3px 20px;
-    border-radius: 20px;
-    font-weight: lighter;
-    width: 82px;
-    color: black;
-}
-
-.ic-css {
-    text-align: center;
-    background: white;
-    border: none;
-    padding: 3px 20px;
-    border-radius: 20px;
-    font-weight: lighter;
-    width: 66px;
-    color: black;
-}
-
-.ic-jquery {
-    text-align: center;
-    background: white;
-    border: none;
-    padding: 3px 20px;
-    border-radius: 20px;
-    font-weight: lighter;
-    width: 88px;
-    color: black;
-}
-
-.ic-bootstrap {
-    text-align: center;
-    background: white;
-    border: none;
-    padding: 3px 20px;
-    border-radius: 20px;
-    font-weight: lighter;
-    width: 102px;
-    color: black;
-}
-
-.ic-xd {
-    text-align: center;
-    background: white;
-    border: none;
-    padding: 3px 20px;
-    border-radius: 20px;
-    font-weight: lighter;
-    width: 112px;
-    color: black;
-}
-
-.ic-php {
-    text-align: center;
-    background: var(--myBg-secondary);
-    border: none;
-    padding: 3px 20px;
-    border-radius: 20px;
-    font-weight: lighter;
-    width: 66px;
-    color: white;
-}
-
-.ic-codeigniter {
-    text-align: center;
-    background: var(--myBg-secondary);
-    border: none;
-    padding: 3px 20px;
-    border-radius: 20px;
-    font-weight: lighter;
-    width: 133px;
-    color: white;
-}
-
-@media screen and (max-width: 950px){
-    .ic-html {
-        font-size: 12px;
-        padding: 2px 6px;
-        width: 52px;
-    }
-
-    .ic-css {
-        font-size: 12px;
-        padding: 2px 6px;
-        width: 52px;
-    }
-
-    .ic-jquery {
-        font-size: 12px;
-        padding: 2px 6px;
-        width: 62px;
-    }
-
-    .ic-bootstrap {
-        font-size: 12px;
-        padding: 2px 6px;
-        width: 72px;
-    }
-
-    .ic-xd {
-        font-size: 12px;
-        padding: 2px 6px;
-        width: 72px;
-    }
-
-    .ic-php {
-        font-size: 12px;
-        padding: 2px 6px;
-        width: 52px;
-    }
-
-    .ic-codeigniter {
-        font-size: 12px;
-        padding: 2px 6px;
-        width: 92px;
-    }
-}
-
-.portfolio section {
-    display: flex;
-    justify-content: space-between;
-    width: 100vw;
-}
-
-.portfolio .projet {
-    /*border: 1px solid white;*/
-    margin-top: 10px;
-    margin-bottom: 10px;
-    width: 100%;
-    height: 100%;
-}
-
-.portfolio .projet .image {
-    border-radius: 12px;
-    width: 280px;
-    height: 100%;
-}
-
 @media screen and (max-width: 1000px){
     .portfolio section {
         display: flex;
@@ -534,6 +470,12 @@ section .bonjour {
     }
     .portfolio .titre {
         width: 180px !important;
+    }
+
+    @media screen and (min-width: 380px){
+        .portfolio .titre {
+            width: 100% !important;
+        }
     }
 }
 

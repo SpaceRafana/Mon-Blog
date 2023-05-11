@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta name="google-site-verification" content="ClrhYn2sjxEZYRtZjb9GgRIB2hc0cSt2R6F-3bcUvG0"/>
+
+    <title>Space Rafana | Articles</title>
+    <link rel="canonical" href="https://space-rafana.netlify.app"/>
+
+    <meta name="keywords"
+          content="Rafanekena, Développeur web Madagascar, Graphic designer à Madagascar Développeur front-end Madagascar, Développeur web, freelance, conception, Madagascar, Designer Madagascar"/>
+    <meta name="description" content="Je suis un développeur web et designer à Madagascar. Je suis à votre service."/>
+    <meta name="author" content="Rafanekena"/>
+
+    <meta property="og:title" content="Space Rafana | développeur et Concepteur web à Madagascar"/>
+    <meta property="og:locale" content="mg_MADAGASCAR"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://space-rafana.netlify.app"/>
+    <meta property="og:description"
+          content="Je suis un développeur web et designer à Madagascar. Je suis à votre service."/>
+
+    <meta name="robots" content="all"/>
+
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="css/app.css" type="text/css" rel="stylesheet">
+    <link href="css/article-style.css" type="text/css" rel="stylesheet">
+    <link href="fontawesome/css/all.min.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+    <div class="nav-links">
+        <div class="logo">
+            <a href="index.html" class="text-light">
+                <img src="img/logo.svg" alt="logo" width="150">
+            </a>
+        </div>
+        <div class="icon-menu">
+            <button type="button" class="text-light"><i class="fa fa-ellipsis-h"></i></button>
+        </div>
+        <ul>
+            <li class="list"><a href="index.html" id="menu-accueil">Accueil</a></li>
+            <li class="list"><a href="#" rel="nofollow" class="active" id="menu-article">Articles</a></li>
+            <li><a href="#" rel="nofollow" class="disabled">Market</a></li>
+            <li class="li-contact"><a href="mailto:fanekena.f12@gmail.com" rel="nofollow" class="myBtn-dark"
+                                      onclick="alert('Voulez-vous m\'envoyer un email ?')">Contactez-moi</a></li>
+        </ul>
+        <div class="button">
+            <a href="mailto:fanekena.f12@gmail.com" rel="nofollow" class="myBtn-dark"
+               onclick="alert('Voulez-vous m\'envoyer un email ?')">Contactez-moi</a>
+        </div>
+    </div>
+</header>
+
+<div class="calque">
+    <section class="article">
+        <h1 class="g-titre mb-5"><i class="fa fa-angle-right"></i> Tutoriel CodeIgniter 4</h1>
+        <div class="contenu">
+            <h2 class="text-center"><strong>Comment installer CodeIgniter 4 avec Wampserver manuellement ?</strong></h2>
+            <div class="mb-5">
+                <h3 class=""><span class="myText">Première étape :</span> Téléchargez et placez le projet CodeIgniter 4 dans
+                    « www ».</h3>
+                <p>
+                    Téléchargez CodeIgniter 4 et le placez dans le dossier " www " qui se trouve dans le dossier
+                    d’installation de Wamp, exemple pour ma part se trouve dans mon disque E:/wamp64/www/.<br><br>
+
+                    CodeIgniter peut être télécharger en .zip ou via " Composer " en ligne de commande
+                    CMD à condition que vous avez <a rel="nofollow" href="https://getcomposer.org/download">Composer</a> installer dans votre machine.
+                    Si vous vous connaissez en ligne de commande, ça ne sera pas êtres compliquer.
+                    Il suffit juste de se pointer dans le dossier « www » et
+                    tapez <code class="bg-dark p-1 rounded-1">composer create-project
+                    codeigniter4/appstarter nom-de-votre-projet-ou-site</code>,
+                    et " nom-de-votre-projet-ou-site " sera le nom de
+                    votre dossier projet CI4 que vous pouvez le changez selon votre choix de nom de votre projet.
+                    Ex : <code class="bg-dark p-1 rounded-1">E:\wamp64\www>composer create-project
+                    codeigniter4/appstarter monsite-lol-ci4</code>. Et ensuite appuyez sur Entrer et composer lance
+                    l’installation automatiquement.
+                    Vous constaterez après installation qu’il y a un dossier qui vient d’être créé dans « www » nommé selon
+                    le nom de votre projet que vous avez choisi.<br><br>
+
+                    <span class="text-decoration-underline">Remarque</span> : si vous ne voulez pas passer par les patati
+                    patata de ligne de commande. Alors, le mieux c’est
+                    de passer par la première option de télécharger manuellement CodeIgniter 4 en fichier .zip ou autre,
+                    disponible sur le net gratuitement.
+                </p>
+            </div>
+
+            <div class="mb-5">
+                <h3 class=""><span class="myText">Deuxième étape :</span> Créez un virtual host.</h3>
+                <div class="d-lg-flex mb-4">
+                    <p class="col-lg-6">
+                        <i class="fa fa-angle-right"></i> Après avoir placer le projet CodeIgniter 4 dans " www ". Démarrez
+                        Wamp et allez vers la page de
+                        Wampserver par votre navigateur sur http://localhost.<br>
+                        Une fois arriver à la page de Wampserver, cliquez sur « Ajoutez un Virtual Host ».
+                    </p>
+                    <div class="d-flex justify-content-lg-end w-100">
+                        <img src="img/virtual-host.PNG" class="img" alt="image"><br><br>
+                    </div>
+                </div>
+                <p>
+                    <i class="fa fa-angle-right"></i> Dans la page Virtual Host. Remplissez les premiers deux formulaires
+                    requis. L’une sera votre nom de site
+                    url que vous pouvez choisir ce que vous voulez (ex : monsite.com). Et l’autre sera le chemin de dossier
+                    de votre projet qu’on vient de créer qui doit se pointer à l’index.php de votre projet (à partir de
+                    CodeIgniter 4 l’index.php se trouve dans le dossier « public »), exemple : "
+                    E:/wamp64/www/monsite-lol-ci4/public/ ". Et cliquez sur « Démarrer la création du VirtualHost (Peut
+                    prendre un certain temps) ».<br><br>
+                    <img src="img/page-vh.png" class="img w-100" alt="image">
+                </p>
+            </div>
+
+            <div class="mb-5">
+                <h3 class=""><span class="myText">Dernière étape :</span> Redémarrez Wamp.</h3>
+                <p>
+                    Pour terminer. Accédez à votre projet en entrant le site url que vous venez de créer selon votre choix,
+                    dans la barre d’adresse de votre navigateur après avoir redémarrer Wamp. Selon mon exemple en haut, pour
+                    moi c'est " http://monsite.com ". <i class="fa fa-grin-wink"></i>
+                </p>
+            </div>
+
+        </div>
+    </section>
+    <footer>
+        <div class="d-flex justify-content-center text-center">
+            <p>COPYRIGHT © 2023 by Rafanekena.<br><span class="text-decoration-underline">Facebook</span> : Ra Fanekena
+            </p>
+        </div>
+    </footer>
+</div>
+<button id="back-to-top" type="button" ><i class="fa fa-arrow-up"></i></button>
+
+<script src="js/bootstrap.bundle.min.js" rel="script"></script>
+<script src="js/jquery-3.6.0.min.js" rel="script"></script>
+<script src="js/app.js" rel="script"></script>
+</body>
+</html>

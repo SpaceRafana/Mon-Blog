@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="UTF-8"/>
-    <meta name="description" content="The small framework with powerful features"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <meta name="google-site-verification" content="ClrhYn2sjxEZYRtZjb9GgRIB2hc0cSt2R6F-3bcUvG0" />
@@ -41,26 +40,30 @@
             <button type="button" class="text-light"><i class="fa fa-ellipsis-h"></i></button>
         </div>
         <ul>
-            <li class="list"><a href="#" class="active" id="menu-accueil">Accueil</a></li>
-            <li class="list"><a href="#" class="" id="menu-portfolio">Portfolio</a></li>
+            <li class="list"><a href="#" rel="nofollow" class="active" id="menu-accueil">Accueil</a></li>
+            <li class="list"><a href="article.html" id="menu-article">Articles</a></li>
             <li><a href="#" rel="nofollow" class="disabled">Market</a></li>
-            <li class="li-contact"><a href="mailto:fanekena.f12@gmail.com" rel="nofollow" class="myBtn-secondary">Contactez-moi</a></li>
+            <li class="li-contact"><a href="mailto:fanekena.f12@gmail.com" rel="nofollow" class="myBtn-dark"
+                                      onclick="alert('Voulez-vous m\'envoyer un email ?')" >Contactez-moi</a></li>
         </ul>
         <div class="button">
-            <a href="mailto:fanekena.f12@gmail.com" rel="nofollow" class="myBtn-secondary">Contactez-moi</a>
+            <a href="mailto:fanekena.f12@gmail.com" rel="nofollow" class="myBtn-dark"
+               onclick="alert('Voulez-vous m\'envoyer un email ?')" >Contactez-moi</a>
         </div>
     </div>
 </header>
 
 <div class="calque">
-    <div id="slide" class="order-first out">
+
+    <div id="slide" class="">
 
 <!--section accueil-->
         <div class="accueil">
             <section>
                 <div class="presentation" itemscope itemtype="http://schema.org/Person">
+
                     <h1 class="text-center">
-                        <span class="bonjour">BONJOUR</span><br>
+                        <span class="bonjour">Salutation</span><br>
                         <span class="moi">MOI, C'EST
                             <strong><span class="myText mb-4 text-uppercase" itemprop="name">
                                 Rafanekena
@@ -74,7 +77,11 @@
                             pour créer un site statique ou dynamique selon votre besoin.
                         </strong>
                     </h2>
-                    <a rel="nofollow" href="img/CV.pdf" class="myBtn"><i class="fa fa-book-open"></i> mon CV</a>
+                    <div class="d-flex">
+                        <a rel="nofollow" href="img/CV.pdf" class="myBtn mx-2">CV</a>
+                        <button type="button" class="myBtn mx-2">Portfolio <i class="fa fa-arrow-right"></i></button>
+                    </div>
+
                 </div>
             </section>
 
@@ -82,20 +89,20 @@
                 <div class="competence">
                     <h4 class="mb-3">Conception Design <i class="fa fa-project-diagram"></i></h4>
                     <div class="d-flex mb-3">
-                        <div class="ic-html me-2">HTML</div>
-                        <div class="ic-css me-2">CSS</div>
-                        <div class="ic-jquery me-2">JQuery</div>
+                        <div class="btn-white-disable me-2">HTML</div>
+                        <div class="btn-white-disable me-2">CSS</div>
+                        <div class="btn-white-disable me-2">JQuery</div>
                     </div>
 
                     <div class="d-flex mb-4">
-                        <div class="ic-bootstrap me-2">Bootstrap</div>
-                        <div class="ic-xd me-2">Adobe XD</div>
+                        <div class="btn-white-disable me-2">Bootstrap</div>
+                        <div class="btn-white-disable me-2">Adobe XD</div>
                     </div>
 
                     <h4 class="mb-3">Technologie</h4>
                     <div class="d-flex mb-4">
-                        <div class="ic-php me-2">PHP</div>
-                        <div class="ic-codeigniter me-2">CodeIgniter 4</div>
+                        <div class="btn-dark-disable me-2">PHP</div>
+                        <div class="btn-dark-disable me-2">CodeIgniter 4</div>
                     </div>
                 </div>
             </section>
@@ -103,7 +110,10 @@
 
 <!--section portfolio-->
         <div class="portfolio">
-            <section>
+            <section class="retour-accueil d-block">
+                <button type="button" class="myBtn"><i class="fa fa-arrow-left"></i></button>
+            </section>
+            <section class="">
                 <div class="projet d-flex d-lg-block align-items-center flex-column">
                     <div class="d-flex align-items-center
                     align-items-lg-start flex-column">
