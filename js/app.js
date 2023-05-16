@@ -76,7 +76,7 @@ $(document).ready(function () {
     //-------------
 
     $('.ligne-y').each(function () {
-        $(this).delay(100).animate({height: 30}, 800);
+        $(this).delay(400).animate({height: 30}, 800);
     })
 
 });
