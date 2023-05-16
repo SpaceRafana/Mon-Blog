@@ -56,17 +56,27 @@ $(document).ready(function () {
 
     //animation accueil
     $(".accueil .presentation .bonjour").each(function () {
-        $(this).delay(500).fadeToggle(1000);
+        $(this).delay(200).fadeToggle(1000);
     });
     $(".accueil .presentation .moi").each(function () {
-        $(this).css({top: 10}).delay(800);
-        $(this).animate({opacity: 1, top: 0}, 1000);
+        $(this).delay(1000).animate({opacity: 1, top: 0}, 1000);
     });
     $(".accueil .presentation h2").each(function () {
-        $(this).css({top: 10}).delay(1200);
-        $(this).animate({opacity: "100%", top: 0 }, 1000);
+        $(this).css({top: 5})
+        $(this).delay(2000).animate({opacity: "100%", top: 0 }, 1000);
     });
     //---------
 
+    /*box article*/
+    $('.box').on('mouseenter', function () {
+        $(this).parent().prev().children(".cercle").addClass("cercle-open");
+    }).on('mouseleave', function () {
+        $('.cercle').removeClass("cercle-open");
+    });
+    //-------------
+
+    $('.ligne-y').each(function () {
+        $(this).delay(100).animate({height: 30}, 800);
+    })
 
 });

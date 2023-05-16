@@ -1,6 +1,6 @@
 :root {
     --myBg: #A0FF11;
-    --myBg-light: #adadad;
+    --myBg-light: rgb(173, 173, 173);
     --myBg-dark: #111111;
     --myBg-secondary: #202020;
 }
@@ -80,11 +80,12 @@ header {
 }
 
 .g-titre {
-    text-shadow: var(--myBg) 0 2px 5px;
+    text-shadow: var(--myBg-light) 0 2px 5px;
+    color: white;
 }
 
 .calque {
-    flex-direction: column;
+    /*flex-direction: column;*/
     width: 100%;
     min-height: 100vh;
     padding-top: 210px;
@@ -93,11 +94,13 @@ header {
 }
 
 .nav-links {
+    background: transparent;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 40px 80px;
+    padding: 20px 80px;
     width: 100vw;
+    transition: 0.3s;
 }
 
 .nav-links .logo {
