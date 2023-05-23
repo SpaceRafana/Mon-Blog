@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="ClrhYn2sjxEZYRtZjb9GgRIB2hc0cSt2R6F-3bcUvG0" name="google-site-verification"/>
+
+    <title>Space Rafana | Articles: tutoriel Symfony</title>
+    <link href="https://space-rafana.netlify.app/utiliser-symfony-avec-wamp.html" rel="canonical"/>
+
+    <meta content="Symfony, Installer Symfony avec Wamp, Symfony avec Wamp, Utiliser Symfony avec Wamp, Wampserver"
+          name="keywords"/>
+    <meta content="Comment utiliser Symfony avec Wampserver ? D'autre que d'utiliser le server symfony.
+     Il est aussi possible de"
+          name="description"/>
+    <meta content="Rafanekena" name="author"/>
+
+    <meta content="Space Rafana | Tutoriel Symfony" property="og:title"/>
+    <meta content="mg" property="og:locale"/>
+    <meta content="website" property="og:type"/>
+    <meta content="https://space-rafana.netlify.app/utiliser-symfony-avec-wamp.html" property="og:url"/>
+    <meta content="Comment utiliser Symfony avec Wampserver ? D'autre que d'utiliser le server symfony.
+     Il est aussi possible de"
+          property="og:description"/>
+
+    <meta content="all" name="robots"/>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/app.css" rel="stylesheet" type="text/css">
+    <link href="css/article-style.css" rel="stylesheet" type="text/css">
+    <link href="fontawesome/css/all.min.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<header>
+    <div class="nav-links">
+        <div class="logo">
+            <a class="text-light" href="/">
+                <img alt="logo" src="img/logo.svg" width="150">
+            </a>
+        </div>
+        <div class="icon-menu">
+            <button class="text-light" type="button"><i class="fa fa-ellipsis-h"></i></button>
+        </div>
+        <ul>
+            <li class="list"><a href="/" id="menu-accueil">Accueil</a></li>
+            <li class="list"><a class="active" href="/articles.html" id="menu-article">Articles</a></li>
+            <li><a class="disabled" href="#" rel="nofollow">Market</a></li>
+            <li class="li-contact"><a class="myBtn-dark" href="mailto:fanekena.f12@gmail.com"
+                                      onclick="alert('Voulez-vous m\'envoyer un email ?')"
+                                      rel="nofollow">Contactez-moi</a></li>
+        </ul>
+        <div class="button">
+            <a class="myBtn-dark" href="mailto:fanekena.f12@gmail.com"
+               onclick="alert('Voulez-vous m\'envoyer un email ?')"
+               rel="nofollow">Contactez-moi</a>
+        </div>
+    </div>
+</header>
+
+<div class="calque">
+    <section class="article">
+        <h1 class="g-titre mb-5"><i class="fa fa-angle-right"></i> Tutoriel Symfony</h1>
+        <div class="contenu">
+            <h2 class="text-center"><strong>Comment utiliser Symfony avec Wampserver ?</strong></h2>
+            <div class="mb-5">
+                <h3><span class="myText">Première étape :</span> Mettre le projet Symfony dans le dossier " www "</h3>
+                <p>
+                    Dans le dossier d’installation de Wamp se trouve un dossier qui se nomme « www ». Ce dossier qui
+                    doit contenir tout vos sites en local avec Wampserver que vous le connaissez peut-être déjà.
+                </p>
+                <p>
+                    Alors, mettez le projet symfony dedans. Exemple E:/wamp64/www/
+                </p>
+            </div>
+
+            <div class="mb-5">
+                <h3><span class="myText">Deuxième étape :</span> Créer un virtual host</h3>
+                <p class="">
+                    Dans la page d’accueil Wamp par localhost. Cliquez le menu "
+                    Ajouter un Virtual Host ".
+                </p>
+                <p>
+                    Après avoir entré dans la page Virtual Host, il y a deux
+                    formulaires marqué Requis à remplir :
+                </p>
+                <p>
+                    <span class="ms-4">
+                        <i class="fa fa-arrow-right"></i> " Nom du Virtual Host " : nom de votre virtual host selon votre choix (ex : mon-site.com).
+                    </span>
+                    <br>
+                    <span class="ms-4">
+                        <i class="fa fa-arrow-right"></i> " Chemin complet absolu du dossier " : entrez le chemin complet qui pointe vers l’index.php
+                        de votre projet Symfony (ex : E:/wamp64/www/mon-projet-symfony/public/).
+                    </span>
+                </p>
+            </div>
+
+            <div class="mb-5">
+                <h3 class=""><span class="myText">Troisième étape :</span> Ajouter un fichier " .htaccess "</h3>
+                <p>
+                    Tout d’abord, Symfony ne contient pas " .htaccess " nativement mais il faut en créer. Si vous savez
+                    créer, tant mieux. Mais si vous ne savez pas, voici la directive :
+                </p>
+                <p class="ms-4">
+                    <i class="fa fa-arrow-right"></i> Ouvrez votre projet par votre éditeur de code. Et dans le dossier
+                    " public " qui contient
+                    l’index.php, créez un fichier " .htaccess ".
+                    <br>
+                    <i class="fa fa-arrow-right"></i> Copiez le code ci-dessous dans le fichier " .htaccess " que vous venez de créer
+                    et enregistrez :
+                </p>
+                <div class="row">
+                    <div class="col-lg-3 mb-lg-0 mb-4">
+                        <img src="img/htaccess.png" alt="dossier projet symfony 5" width="250">
+                    </div>
+                    <div class="col-lg-6">
+                        <iframe height="250" width="420" src="img/htaccess.txt" class="bg-light rounded-3"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-5">
+                <h3 class=""><span class="myText">Dernière étape :</span> Redémarrer Wamp</h3>
+                <p>
+                    Après avoir redémarrer wamp. Accéder à votre projet/site par le nom de virtual host que vous avez
+                    choisi.
+                </p>
+                <p>
+                    <span class="text-decoration-underline">Remarque</span> :
+                </p>
+                <p class="ms-4">
+                    # N’oubliez pas d’entrer « http:// » avant le nom de votre virtual host dans l’url.
+                    <br>
+                    # Il n’est pas obligatoire de faire un <code>symfony server:start</code> dans le terminal comme d’habitude pour
+                    lancer symfony, mais juste seulement démarrer wamp et entrer le nom de virtual host dans l’url
+                </p>
+            </div>
+
+        </div>
+    </section>
+    <footer class="">
+        <div class="d-flex justify-content-center text-center">
+            <p>COPYRIGHT © 2023 - designed by Rafanekena.<br><span class="text-decoration-underline">Facebook</span> :
+                Ra Fanekena</p>
+        </div>
+    </footer>
+</div>
+<button id="back-to-top" type="button"><i class="fa fa-arrow-up"></i></button>
+
+<script rel="script" src="js/bootstrap.bundle.min.js"></script>
+<script rel="script" src="js/jquery-3.6.0.min.js"></script>
+<script rel="script" src="js/app.js"></script>
+</body>
+</html>

@@ -63,11 +63,11 @@ body {
     display: block;
     color: white;
     background-image: url("../img/space-background.svg");
-    background-size: auto 100%;
+    background-size: cover;
     background-repeat: no-repeat;
+    background-position: right;
     background-attachment: fixed;
-    /*min-width: 100vw;
-    min-height: 100vh;*/
+    min-width: 100vw;
     font-family: sans-serif;
     font-size: 15px;
 }
@@ -111,9 +111,6 @@ header {
 
 .nav-links ul {
     display: flex;
-    border-left: 1px solid var(--myBg-light);
-    border-right: 1px solid var(--myBg-light);
-    padding: 4px 5px;
 }
 
 .nav-links ul li {
@@ -130,6 +127,7 @@ header {
 .nav-links ul li .active {
     color: white;
     font-weight: 500;
+    padding-bottom: 5px;
     border-bottom: 2px solid var(--myBg);
 }
 
@@ -220,7 +218,7 @@ section .presentation h1{
 }
 
 section .bonjour {
-    text-shadow: 0 2px 3px var(--myBg);
+    border-bottom: 2px solid var(--myBg);
     display: none;
 }
 
@@ -233,7 +231,7 @@ section .bonjour {
 
 .accueil .moi {
     position: relative;
-    font-size: 40px !important;
+    font-size: 46px;
     opacity: 0;
 }
 

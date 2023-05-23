@@ -55,15 +55,13 @@ $(document).ready(function () {
     //---------
 
     //animation accueil
-    $(".accueil .presentation .bonjour").each(function () {
-        $(this).delay(200).fadeToggle(1000);
-    });
-    $(".accueil .presentation .moi").each(function () {
-        $(this).delay(1000).animate({opacity: 1, top: 0}, 1000);
-    });
-    $(".accueil .presentation h2").each(function () {
-        $(this).css({top: 5})
-        $(this).delay(2000).animate({opacity: "100%", top: 0 }, 1000);
+    var $bonjour = $(".accueil .presentation .bonjour"),
+        $moi = $(".accueil .presentation .moi"),
+        $h2 = $(".accueil .presentation h2");
+    $bonjour.delay(200).fadeToggle(800, function () {
+        $moi.animate({opacity: 1, top: 0},1000, function () {
+            $h2.css({position: "relative", top: 10}).animate({opacity: 1, top: 0 }, 1000);
+        });
     });
     //---------
 
@@ -78,5 +76,11 @@ $(document).ready(function () {
     $('.ligne-y').each(function () {
         $(this).delay(400).animate({height: 30}, 800);
     })
+
+    /*let sr = ScrollReveal({reset: true});
+    sr.reveal('.competence', {
+        origin: "right",
+        duration: 2000
+    });*/
 
 });
