@@ -324,6 +324,13 @@ section .bonjour {
     font-size: 17px;
 }
 
+.service form {
+    background: rgba(49, 49, 49, 0.3);
+    backdrop-filter: blur(12px);
+    padding: 25px 50px;
+    border-radius: 12px;
+}
+
 .form-control {
     padding: 4px 0;
     border-top: 0;
