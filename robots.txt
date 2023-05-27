@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /success.html
+Sitemap: https://space-rafana.netlify.app/sitemap-space-rafana.xml
