@@ -65,14 +65,14 @@
         font-size: small;
     }
 
+    .calque {
+        padding-top: 120px;
+    }
+
 }
 
 /*Corps mode mobile*/
 @media screen and (max-width: 837px){
-
-    #slide {
-        padding-top: 150px;
-    }
 
     section {
         padding: 40px 20px;
