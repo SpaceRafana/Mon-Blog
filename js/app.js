@@ -65,7 +65,7 @@ $(document).ready(function () {
     var $bonjour = $(".accueil .presentation .bonjour"),
         $moi = $(".accueil .presentation .moi"),
         $h2 = $(".accueil .presentation h2");
-    $bonjour.delay(1600).fadeToggle(800, function () {
+    $bonjour.delay(1700).fadeToggle(800, function () {
         $moi.animate({opacity: 1, top: 0},1000, function () {
             $h2.css({position: "relative", top: 5}).animate({opacity: 1, top: 0 }, 1000);
         });
