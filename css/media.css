@@ -1,0 +1,184 @@
+/*Tête mode mobile*/
+@media screen and (max-width: 950px){
+    .nav-links {
+        padding: 40px 20px;
+    }
+
+    .nav-links ul .li-contact {
+        display: flex;
+    }
+
+    .li-contact .myBtn-dark{
+        padding: 20px;
+        border-radius: 12px;
+    }
+
+    .nav-links .logo {
+        display: flex;
+        align-items: center;
+        padding-bottom: 3px;
+    }
+
+    .nav-links .logo img {
+        width: 110px;
+    }
+
+    .nav-links ul {
+        background: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(55px);
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: none;
+        border-radius: 12px;
+        padding: 10px 20px;
+        right: 20px;
+        top: 120px;
+        margin-right: -60%;
+        transition: 0.5s;
+        z-index: 2;
+    }
+
+    .open {
+        position: absolute !important;
+        margin-right: 0 !important;
+    }
+
+    .nav-links ul li {
+        margin: 5px 0;
+    }
+
+    .icon-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-links .logo {
+        width: 150px;
+    }
+
+    .nav-links .button {
+        display: none;
+        width: 150px;
+        font-size: small;
+    }
+
+}
+
+/*Corps mode mobile*/
+@media screen and (max-width: 837px){
+
+    #slide {
+        padding-top: 150px;
+    }
+
+    section {
+        padding: 40px 20px;
+    }
+
+    section .presentation{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    section .presentation h1{
+        font-family: "Alien Encounters Solid", "sans-serif";
+        font-size: 40px;
+    }
+
+    .accueil .moi {
+        font-size: 30px !important;
+    }
+
+    section .presentation h2{
+        font-size: 16px !important;
+        padding: 0 30px;
+    }
+
+    section .competence h4 {
+        font-size: 18px;
+    }
+
+    .btn-white-disable {
+        padding: 5px 10px;
+    }
+
+    .btn-dark-disable {
+        padding: 5px 10px;
+    }
+
+    .portfolio .retour-accueil {
+        padding: 30px 0;
+    }
+
+    .service .box i {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(160, 255, 17, 0.2);
+        box-shadow: 0 0 4px 2px var(--myBg-light);
+        border-radius: 8px;
+        width: 40px;
+        height: 40px;
+    }
+
+    @media screen and (min-width: 580px){
+
+        section .presentation h1{
+            font-family: "Alien Encounters Solid", "sans-serif";
+            font-size: 48px;
+        }
+
+        section .bonjour {
+            height: 60px;
+        }
+
+        .accueil .moi {
+            font-size: 30px !important;
+        }
+
+        section .presentation h5{
+            font-size: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .portfolio section {
+        justify-content: center;
+        margin-left: 0;
+    }
+    .portfolio .projet .image {
+        border-radius: 12px;
+        width: 180px;
+        height: 100%;
+    }
+    .portfolio .titre {
+        width: 180px !important;
+    }
+
+    @media screen and (min-width: 380px){
+        .portfolio .titre {
+            width: 100% !important;
+        }
+    }
+}
+
+@media screen and (max-width: 450px){
+
+    .portfolio section {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0;
+    }
+
+    .portfolio .projet .image {
+        width: 250px;
+    }
+}

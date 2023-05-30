@@ -1,5 +1,5 @@
 :root {
-    --myBg: #A0FF11;
+    --myBg: #99CC33;
     --myBg-light: rgb(173, 173, 173);
     --myBg-dark: #111111;
     --myBg-secondary: #202020;
@@ -14,6 +14,25 @@
 @font-face {
     src: url("../fontawesome/webfonts/ALIENATO.TTF") format("truetype");
     font-family: "Alienator";
+}
+
+.loader_bg {
+    position: fixed;
+    z-index: 9999999;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+}
+
+.loader {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .myBg {
@@ -63,9 +82,10 @@ body {
     display: block;
     color: white;
     background-image: url("../img/space-background.svg");
+    background-color: #000000;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: right;
+    background-position: left;
     background-attachment: fixed;
     min-width: 100vw;
     font-family: sans-serif;
@@ -88,7 +108,6 @@ header {
     /*flex-direction: column;*/
     width: 100%;
     min-height: 100vh;
-    padding-top: 210px;
     padding-bottom: 10px;
     overflow-x: hidden;
 }
@@ -178,7 +197,8 @@ header {
     display: flex;
     width: 100%;
     margin: 0;
-    transition: 1.2s cubic-bezier(0.3, 0.47, 0.57, 1.16);
+    padding-top: 220px;
+    transition: margin 1.2s cubic-bezier(0.3, 0.47, 0.57, 1.16);
 }
 
 .in {
@@ -213,12 +233,11 @@ section .presentation{
 
 section .presentation h1{
     font-family: "Alien Encounters Solid", "sans-serif";
-    line-height: 55px;
     font-size: 65px;
 }
 
 section .bonjour {
-    border-bottom: 2px solid var(--myBg);
+    border-bottom: 1px solid var(--myBg);
     display: none;
 }
 
@@ -299,8 +318,8 @@ section .bonjour {
     height: 100%;
 }
 
-.service .box {
-
+.service {
+    background: #131313;
 }
 
 .ligne-x {
@@ -310,7 +329,7 @@ section .bonjour {
 }
 
 .service .box i {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     border: 1px solid rgba(160, 255, 17, 0.2);
@@ -324,13 +343,14 @@ section .bonjour {
     font-size: 17px;
 }
 
-.service form {
-    background: rgba(49, 49, 49, 0.3);
+.contact form {
+    background: rgba(186, 186, 186, 0.3);
     backdrop-filter: blur(12px);
     padding: 25px 50px;
     border-radius: 12px;
 }
 
+/*form design*/
 .form-control {
     padding: 4px 0;
     border-top: 0;
@@ -351,6 +371,7 @@ section .bonjour {
     border-bottom: 1px solid var(--myBg) !important;
     box-shadow: none;
 }
+/*end form design*/
 
 .ligne-success-y {
     background: white;
@@ -381,179 +402,6 @@ section .bonjour {
 
 /*------------------------------------------------Tout les medias query*-------------------------------------------/
 
-/*Tête mode mobile*/
-@media screen and (max-width: 950px){
-    .nav-links {
-        padding: 40px 20px;
-    }
 
-    .nav-links ul .li-contact {
-        display: flex;
-    }
-
-    .li-contact .myBtn-dark{
-        padding: 20px;
-        border-radius: 12px;
-    }
-
-    .nav-links .logo {
-        display: flex;
-        align-items: center;
-        padding-bottom: 3px;
-    }
-
-    .nav-links .logo img {
-        width: 110px;
-    }
-
-    .nav-links ul {
-        background: rgba(0, 0, 0, 0.6);
-        backdrop-filter: blur(55px);
-        position: fixed;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        border: none;
-        border-radius: 12px;
-        padding: 10px 20px;
-        right: 20px;
-        top: 120px;
-        margin-right: -60%;
-        transition: 0.5s;
-        z-index: 2;
-    }
-
-    .open {
-        position: absolute !important;
-        margin-right: 0 !important;
-    }
-
-    .nav-links ul li {
-        margin: 5px 0;
-    }
-
-    .icon-menu {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .nav-links .logo {
-        width: 150px;
-    }
-
-    .nav-links .button {
-        display: none;
-        width: 150px;
-        font-size: small;
-    }
-
-}
-
-/*Corps mode mobile*/
-@media screen and (max-width: 837px){
-
-    .calque {
-        padding-top: 150px;
-    }
-
-    #slide {
-        top: 100px;
-    }
-
-    section {
-        padding: 40px 20px;
-    }
-
-    section .presentation{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin-top: 30px;
-    }
-
-    section .presentation h1{
-        font-family: "Alien Encounters Solid", "sans-serif";
-        line-height: 44px !important;
-        font-size: 40px;
-    }
-
-    .accueil .moi {
-        font-size: 30px !important;
-    }
-
-    section .presentation h2{
-        font-size: 16px !important;
-        padding: 0 30px;
-    }
-
-    section .competence h4 {
-        font-size: 18px;
-    }
-
-    .portfolio .retour-accueil {
-        padding: 30px 0;
-    }
-
-    @media screen and (min-width: 580px){
-
-        #slide {
-            top: 100px;
-        }
-
-        section .presentation h1{
-            font-family: "Alien Encounters Solid", "sans-serif";
-            font-size: 48px;
-        }
-
-        section .bonjour {
-            height: 60px;
-        }
-
-        .accueil .moi {
-            font-size: 30px !important;
-        }
-
-        section .presentation h5{
-            font-size: 20px;
-        }
-    }
-}
-
-@media screen and (max-width: 1000px){
-    .portfolio section {
-        justify-content: center;
-        margin-left: 0;
-    }
-    .portfolio .projet .image {
-        border-radius: 12px;
-        width: 180px;
-        height: 100%;
-    }
-    .portfolio .titre {
-        width: 180px !important;
-    }
-
-    @media screen and (min-width: 380px){
-        .portfolio .titre {
-            width: 100% !important;
-        }
-    }
-}
-
-@media screen and (max-width: 450px){
-
-    .portfolio section {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin-left: 0;
-    }
-
-    .portfolio .projet .image {
-        width: 250px;
-    }
-}
 
 

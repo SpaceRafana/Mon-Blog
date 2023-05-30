@@ -36,10 +36,15 @@
 
     <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
     <link href="css/app.css" type="text/css" rel="stylesheet">
+    <link href="css/media.css" type="text/css" rel="stylesheet">
     <link href="fontawesome/css/all.min.css" type="text/css" rel="stylesheet">
 </head>
 
 <body class="">
+
+<div class="loader_bg">
+    <div class="loader"><img src="img/loading.gif" alt="#" /></div>
+</div>
 
 <header>
     <div class="nav-links">
@@ -74,8 +79,8 @@
             <section>
                 <div class="presentation" itemscope itemtype="http://schema.org/Person">
 
-                    <h1 class="text-center">
-                        <span class="bonjour">Bonjour</span><br>
+                    <h1 class="text-center d-flex flex-column">
+                        <span class="bonjour">Bonjour</span>
                         <span class="moi">MOI, C'EST
                             <strong><span class="myText mb-4 text-uppercase" itemprop="name">
                                 Rafanekena
@@ -243,7 +248,7 @@
         </div>
     </section>
 
-    <section class="service">
+    <section class="contact">
         <div class="mb-4">
             <div class="col-12 d-flex">
                 <h3 class="">Envoyez moi un message ou juste pour me dire bonjour</h3>
@@ -252,9 +257,9 @@
         <div class="col-lg-6">
             <form name="contact" method="post" action="/success.html" netlify class="">
                 <label for="email" class=""></label>
-                <input type="email" name="email" class="form-control mb-3" id="email" required placeholder="E-mail">
+                <input type="email" name="email" class="form-control mb-3" id="email" placeholder="E-mail" required>
                 <label for="msg" class=""></label>
-                <textarea id="msg" name="message" type="text" class="form-control mb-5" placeholder="Message (250 mots)"></textarea>
+                <textarea id="msg" name="message" type="text" class="form-control mb-5" placeholder="Message (250 mots)" required></textarea>
                 <button type="submit" class="myBtn">Envoyer</button>
             </form>
         </div>
