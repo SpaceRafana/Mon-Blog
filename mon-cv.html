@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0SRR3WM1QL"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-0SRR3WM1QL');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta name="google-site-verification" content="ClrhYn2sjxEZYRtZjb9GgRIB2hc0cSt2R6F-3bcUvG0"/>
+    <link  rel="shortcut icon" type="image/png" href="img/mon-icon.png"/>
+
+    <title>Mon CV | Space Rafana</title>
+    <meta name="robots" content="noindex"/>
+
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="css/app.css" type="text/css" rel="stylesheet">
+    <link href="css/media.css" type="text/css" rel="stylesheet">
+    <link href="fontawesome/css/all.min.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="loader_bg">
+    <div class="loader"><img src="img/loading-animation.gif" alt="#" /></div>
+</div>
+
+<header>
+    <div class="nav-links">
+        <div class="logo">
+            <a href="/" class="text-light">
+                <img src="img/logo.svg" alt="logo" width="150">
+            </a>
+        </div>
+        <div class="icon-menu">
+            <button type="button" class="text-light"><i class="fa fa-ellipsis-h"></i></button>
+        </div>
+        <ul>
+            <li class="list"><a href="/" id="menu-accueil">Accueil</a></li>
+            <li class="list"><a href="/articles.html" class="" id="menu-article">Articles</a></li>
+            <li><a href="#" rel="nofollow" class="disabled">Market</a></li>
+            <li class="li-contact"><a href="mailto:fanekena.f12@gmail.com" rel="nofollow" class="myBtn-dark"
+                                      onclick="alert('Voulez-vous m\'envoyer un email ?')">Contactez-moi</a></li>
+        </ul>
+        <div class="button">
+            <a href="mailto:fanekena.f12@gmail.com" rel="nofollow" class="myBtn-dark"
+               onclick="alert('Voulez-vous m\'envoyer un email ?')">Contactez-moi</a>
+        </div>
+    </div>
+</header>
+
+<div class="calque">
+    <section class="mon-cv">
+        <div class="col-12 d-flex mb-5">
+            <div class="ligne-x d-flex align-self-center"></div>
+            <h1 class="text-center w-75">Mon CV</h1>
+            <div class="ligne-x d-flex align-self-center"></div>
+        </div>
+
+        <div class="col-12">
+            <iframe src="img/CV.pdf" width="100%" height="1000"></iframe>
+        </div>
+
+    </section>
+
+    <section class="contact">
+        <div class="mb-4">
+            <div class="col-12 d-flex">
+                <h3 class="">Envoyez moi un message ou juste pour me dire bonjour</h3>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <form name="contact" method="post" action="/success.html" netlify class="">
+                <label for="email" class=""></label>
+                <input type="email" name="email" class="form-control mb-3" id="email" placeholder="E-mail" required>
+                <label for="msg" class=""></label>
+                <textarea id="msg" name="message" type="text" class="form-control mb-5" placeholder="Message (250 mots)" required></textarea>
+                <button type="submit" class="myBtn">Envoyer</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="d-flex justify-content-center text-center">
+            <p>COPYRIGHT © 2023 by Rafanekena.<br><span class="text-decoration-underline">Facebook</span> : Ra Fanekena
+            </p>
+        </div>
+    </footer>
+</div>
+<button id="back-to-top" type="button"><i class="fa fa-arrow-up"></i></button>
+
+<script src="js/bootstrap.bundle.min.js" rel="script"></script>
+<script src="js/jquery-3.6.0.min.js" rel="script"></script>
+<script src="js/scrollreveal.js" rel="script"></script>
+<script src="js/app.js" rel="script"></script>
+</body>
+</html>
