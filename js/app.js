@@ -7,7 +7,7 @@ $(document).ready(function () {
     //icon menu
     $(".icon-menu button").on("click", function () {
         $(".nav-links ul").toggleClass("open");
-        $(".nav-links .icon-menu i").toggleClass("fa-arrow-right").toggleClass("fa-ellipsis-h");
+        $(".nav-links .icon-menu i").toggleClass("fa-times-circle-o").toggleClass("fa-ellipsis-h");
     });
     //---------
 

@@ -1,7 +1,13 @@
 /*Tête mode mobile*/
 @media screen and (max-width: 950px){
+
+    .loader img {
+        width: 280px;
+        height: 280px;
+    }
+
     .nav-links {
-        padding: 40px 20px;
+        padding: 12px 20px;
     }
 
     .nav-links ul .li-contact {
@@ -92,7 +98,7 @@
     }
 
     .accueil .moi {
-        font-size: 30px !important;
+        font-size: 25px !important;
     }
 
     section .presentation h2{
@@ -120,9 +126,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        border: 1px solid rgba(160, 255, 17, 0.2);
-        box-shadow: 0 0 4px 2px var(--myBg-light);
-        border-radius: 8px;
+        font-size: medium !important;
+        border: 1px solid var(--myBg-light);
+        box-shadow: none;
         width: 40px;
         height: 40px;
     }
