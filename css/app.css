@@ -83,13 +83,20 @@ body {
     color: white;
     background-image: url("../img/space-background.svg");
     background-color: #000000;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
-    background-position: left;
+    background-position: center;
     background-attachment: fixed;
     min-width: 100vw;
     font-family: sans-serif;
     font-size: 15px;
+    overflow-x: hidden;
+}
+
+@media screen and (max-width: 780px) {
+    body {
+        background-size: 700px;
+    }
 }
 
 header {
@@ -314,7 +321,8 @@ section .bonjour {
 }
 
 .service {
-    background: #131313;
+    background: rgba(19, 19, 19, 0.5);
+    backdrop-filter: blur(10px);
 }
 
 .ligne-x {
@@ -339,8 +347,8 @@ section .bonjour {
 }
 
 .contact form {
-    background: rgba(186, 186, 186, 0.3);
-    backdrop-filter: blur(12px);
+    background: rgba(186, 186, 186, 0.2);
+    backdrop-filter: blur(8px);
     padding: 25px 50px;
     border-radius: 12px;
 }

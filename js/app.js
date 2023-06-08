@@ -69,6 +69,7 @@ $(document).ready(function () {
             $h2.css({position: "relative", top: 5}).animate({opacity: 1, top: 0 }, 1000);
         });
 
+
     //---------
 
     /*box article*/
@@ -90,3 +91,4 @@ $(document).ready(function () {
     });*/
 
 });
+
