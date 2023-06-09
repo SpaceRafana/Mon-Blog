@@ -87,7 +87,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-    min-width: 100vw;
+    width: 100%;
     font-family: sans-serif;
     font-size: 15px;
     overflow-x: hidden;
@@ -107,7 +107,7 @@ header {
 }
 
 .g-titre {
-    text-shadow: var(--myBg-light) 0 2px 5px;
+    font-size: 45px;
     color: white;
 }
 

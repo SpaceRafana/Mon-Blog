@@ -40,8 +40,7 @@ a:hover {
 }
 
 .article-principal .cercle {
-    z-index: 2;
-    padding: 20px;
+    padding: 12px 12px;
     border: 1px solid white;
     border-radius: 100%;
     color: white;
