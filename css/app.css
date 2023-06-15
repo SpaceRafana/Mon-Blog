@@ -7,13 +7,13 @@
 
 @font-face {
     src: url('../fontawesome/webfonts/Alien-Encounters-Solid-Bold.ttf') format("truetype"),
-    url("../fontawesome/webfonts/Alien-Encounters-Solid-Regular.ttf") format("truetype");
+        url("../fontawesome/webfonts/Alien-Encounters-Solid-Regular.ttf") format("truetype");
     font-family: "Alien Encounters Solid";
 }
 
 @font-face {
-    src: url("../fontawesome/webfonts/ALIENATO.TTF") format("truetype");
-    font-family: "Alienator";
+    src: url("../fontawesome/webfonts/segoeui.ttf") format("truetype");
+    font-family: "Segoe UI";
 }
 
 .loader_bg {
@@ -88,7 +88,7 @@ body {
     background-position: center;
     background-attachment: fixed;
     width: 100%;
-    font-family: sans-serif;
+    font-family: "Segoe UI", sans-serif;
     font-size: 15px;
     overflow-x: hidden;
 }
@@ -213,7 +213,6 @@ header {
     margin-left: 0 !important;
 }
 
-
 #slide .accueil {
     min-width: 100%;
 }
@@ -240,11 +239,15 @@ section .presentation h1{
 }
 
 section .bonjour {
+    color: transparent;
+    -webkit-text-stroke: 0.1mm whitesmoke;
+    text-shadow: -11px -5px 0 white;
     border-bottom: 1px solid var(--myBg);
 }
 
 .presentation h2 {
     position: relative;
+    font-family: "Segoe UI", sans-serif;
     font-weight: lighter !important;
     opacity: 0;
     padding: 0 70px;
@@ -254,6 +257,11 @@ section .bonjour {
     position: relative;
     font-size: 46px;
     opacity: 0;
+}
+
+.accueil .moi span {
+    color: transparent;
+    -webkit-text-stroke: 0.1mm var(--myBg);
 }
 
 .myBtn {
@@ -335,7 +343,7 @@ section .bonjour {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid rgba(160, 255, 17, 0.2);
+    border: 1px solid var(--myBg-light);
     box-shadow: 0 0 4px 2px var(--myBg-light);
     border-radius: 8px;
     width: 58px;
