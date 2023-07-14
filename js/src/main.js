@@ -1,7 +1,4 @@
 import * as THREE from "./three-module.js";
-import {OrbitControls} from "./OrbitControls.js";
-import {GLTFLoader} from "./loader/GLTFLoader.js";
-
 
 const container = document.getElementById('3d');
 const scene = new THREE.Scene();
@@ -19,11 +16,6 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio));
 renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 container.appendChild(renderer.domElement);
-
-// Controles de la caméra
-/*const cameraControls = new OrbitControls(camera, renderer.domElement);
-cameraControls.enablePan = false;
-cameraControls.enableRotate = false*/
 
 const texture = new THREE.TextureLoader().load("./js/src/texture/logo.png");
 const geometry = new THREE.SphereGeometry(1, 80, 80);
