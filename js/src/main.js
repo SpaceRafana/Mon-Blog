@@ -5,8 +5,6 @@ const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight,
     0.1, 1000);
 camera.position.set(0, 2, 4);
-/*const axes = new THREE.AxesHelper(18);
-scene.add(axes);*/
 
 // Rendu
 const renderer = new THREE.WebGLRenderer({alpha: true, antialias: true,});
@@ -29,8 +27,6 @@ const ambientLight = new THREE.AmbientLight(0xfffa0f, 0.005);
 
 const directionalLight = new THREE.DirectionalLight(0xffff0ff, 0.8);
 directionalLight.position.set(15, 5, 5);
-directionalLight.castShadow = true;
-const directionalLightHelper = new THREE.DirectionalLightHelper(directionalLight);
 scene.add(directionalLight, ambientLight);
 
 function render() {

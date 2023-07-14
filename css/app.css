@@ -81,9 +81,9 @@ ul {
 body {
     display: block;
     color: white;
-    background-image: url("../img/space-background.svg");
+    background-image: url("../img/space-background.gif");
     background-color: #000000;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
