@@ -7,7 +7,7 @@ const camera = new THREE.PerspectiveCamera(45, container.clientWidth / container
 camera.position.set(0, 1.8, 8);
 
 // Rendu
-const renderer = new THREE.WebGL1Renderer({alpha: true, antialias: true,});
+const renderer = new THREE.WebGLRenderer({alpha: true, antialias: true,});
 renderer.setSize(container.clientWidth, container.clientHeight);
 renderer.autoClear = false;
 renderer.setPixelRatio(Math.min(window.devicePixelRatio));
