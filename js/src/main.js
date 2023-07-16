@@ -2,9 +2,9 @@ import * as THREE from "./three-module.js";
 
 const container = document.getElementById('3d');
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight,
+const camera = new THREE.PerspectiveCamera(45, container.clientWidth / container.clientHeight,
     0.1, 1000);
-camera.position.set(0, 2, 4);
+camera.position.set(0, 1.8, 8);
 
 // Rendu
 const renderer = new THREE.WebGLRenderer({alpha: true, antialias: true,});
@@ -15,17 +15,19 @@ container.appendChild(renderer.domElement);
 
 const texture = new THREE.TextureLoader().load("./js/src/texture/logo.png");
 const geometry = new THREE.SphereGeometry(1, 80, 80);
-const material = new THREE.MeshPhongMaterial({map: texture, wireframe: false});
+const material = new THREE.MeshStandardMaterial({map: texture, wireframe: false});
 const mesh = new THREE.Mesh(geometry, material);
-mesh.position.y = 1
-mesh.rotation.x = 0.08
+mesh.receiveShadow = true
+mesh.position.y = 3
+mesh.rotation.x = 0
 mesh.rotation.y = 4
 scene.add(mesh);
 
 // Lumière
-const ambientLight = new THREE.AmbientLight(0xfffa0f, 0.005);
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.001);
 
-const directionalLight = new THREE.DirectionalLight(0xffff0ff, 0.8);
+const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
+directionalLight.castShadow = true
 directionalLight.position.set(15, 5, 5);
 scene.add(directionalLight, ambientLight);
 
@@ -51,5 +53,15 @@ function onWindowResize() {
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
 }
+document.body.onresize = onWindowResize
+
+const pFolio = document.getElementById("portfolio")
+function rotateCam() {
+    const t = document.body.getBoundingClientRect().top;
+    mesh.rotation.y += (-0.00005 * t);
+    /*camera.rotation.y += (-0.00001 * t)
+    mesh.rotation.y += (-0.0003 * t)*/
+}
+document.body.onscroll = rotateCam
 
 animate();
