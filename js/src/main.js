@@ -7,7 +7,7 @@ const camera = new THREE.PerspectiveCamera(45, container.clientWidth / container
 camera.position.set(0, 1.8, 8);
 
 // Rendu
-const renderer = new THREE.WebGLRenderer({alpha: true, antialias: true,});
+const renderer = new THREE.WebGL1Renderer({alpha: true, antialias: true,});
 renderer.setSize(container.clientWidth, container.clientHeight);
 renderer.autoClear = false;
 renderer.setPixelRatio(Math.min(window.devicePixelRatio));
@@ -25,17 +25,13 @@ scene.add(mesh);
 
 // Lumière
 const ambientLight = new THREE.AmbientLight(0xffffff, 0.001);
-
 const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
 directionalLight.castShadow = true
 directionalLight.position.set(15, 5, 5);
 scene.add(directionalLight, ambientLight);
 
 function render() {
-    // Effacer le rendu précédent
     renderer.clear();
-    // Rendu de la scène 3D
-
     renderer.render(scene, camera);
 }
 
@@ -59,8 +55,6 @@ const pFolio = document.getElementById("portfolio")
 function rotateCam() {
     const t = document.body.getBoundingClientRect().top;
     mesh.rotation.y += (-0.00005 * t);
-    /*camera.rotation.y += (-0.00001 * t)
-    mesh.rotation.y += (-0.0003 * t)*/
 }
 document.body.onscroll = rotateCam
 
