@@ -1,9 +1,8 @@
+setTimeout(function () {
+    $('.loader_bg').fadeToggle();
+}, 1500);
+
 $(document).ready(function () {
-
-    setTimeout(function () {
-        $('.loader_bg').fadeToggle();
-    }, 1500);
-
     //icon menu
     $(".icon-menu button").on("click", function () {
         $(".nav-links ul").toggleClass("open");
@@ -13,7 +12,6 @@ $(document).ready(function () {
     //---------
 
     /*scroll to top*/
-
     $(window).on('scroll', function (){
         scroll = $(window).scrollTop();
         if (scroll >= 100){
@@ -27,7 +25,6 @@ $(document).ready(function () {
             scrollTop: 0,
         }, 100);
     });
-
     //------------------
 
     //liste menu and mobile
@@ -59,7 +56,6 @@ $(document).ready(function () {
         $mAccueil.removeClass("active");
 
     });
-
     //---------
 
     //animation accueil
@@ -69,8 +65,6 @@ $(document).ready(function () {
         $moi.delay(2000).animate({opacity: 1, top: 0},1000, function () {
             $h2.css({position: "relative", top: 5}).animate({opacity: 1, top: 0 }, 1000);
         });
-
-
     //---------
 
     /*box article*/
@@ -84,12 +78,4 @@ $(document).ready(function () {
     $('.ligne-y').each(function () {
         $(this).delay(1600).animate({height: 30}, 800);
     })
-
-    /*let sr = ScrollReveal({reset: true});
-    sr.reveal('.competence', {
-        origin: "right",
-        duration: 2000
-    });*/
-
 });
-
