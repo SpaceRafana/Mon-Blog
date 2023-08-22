@@ -37,12 +37,12 @@ $(document).ready(function () {
 
     $(".presentation button").on("click", function () {
         $slide.addClass("in").removeClass("out");
-        $(".portfolio section").fadeToggle().css({display: "flex"});
+        $(".portfolio section").show().css({display: "flex"});
     });
 
     $btnRetourAccueil.on("click", function () {
         $slide.removeClass("in").addClass("out");
-        $(".portfolio section:eq(1)").fadeToggle(1000);
+        $(".portfolio section").fadeToggle(1000);
     });
 
     $(".nav-links #menu-article").on("click", function () {

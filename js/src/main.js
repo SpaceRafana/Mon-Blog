@@ -1,4 +1,5 @@
 import * as THREE from "./three-module.js";
+import {GLTFLoader} from "./loader/GLTFLoader.js";
 document.body.onload = () => {
     const container = document.getElementById('3d');
     const scene = new THREE.Scene();
@@ -13,7 +14,7 @@ document.body.onload = () => {
     renderer.setPixelRatio(Math.min(window.devicePixelRatio));
     container.appendChild(renderer.domElement);
 
-    const texture = new THREE.TextureLoader().load("./js/src/texture/logo.png");
+    const texture = new THREE.TextureLoader().load("./js/src/texture/texture-SR.png");
     const geometry = new THREE.SphereGeometry(1, 80, 80);
     const material = new THREE.MeshStandardMaterial({map: texture, wireframe: false});
     const mesh = new THREE.Mesh(geometry, material);
@@ -22,6 +23,22 @@ document.body.onload = () => {
     mesh.rotation.x = 0
     mesh.rotation.y = 4
     scene.add(mesh);
+
+    const loader = new GLTFLoader()
+    loader.load('./js/src/modele/extraterrestre.glb', function (gltf) {
+            const modele = gltf.scene
+
+            modele.rotation.z = -0.4
+            modele.position.set(-4, 1, 0)
+            mesh.add(modele)
+
+        }, function (xhr) {
+            console.log((xhr.loaded / xhr.total * 100) + '% chargé');
+        },
+        function (error) {
+            console.error(error);
+        }
+    )
 
 // Lumière
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.001);
