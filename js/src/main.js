@@ -1,23 +1,28 @@
 import * as THREE from "./three-module.js";
 import {GLTFLoader} from "./loader/GLTFLoader.js";
-document.body.onload = () => {
-    const container = document.getElementById('3d');
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(45, container.clientWidth / container.clientHeight,
+
+let container = document.getElementById('3d');
+let scene,camera,renderer,mesh
+init()
+animate()
+function init() {
+
+    scene = new THREE.Scene();
+    camera = new THREE.PerspectiveCamera(45, container.clientWidth / container.clientHeight,
         0.1, 1000);
     camera.position.set(0, 1.8, 8);
 
 // Rendu
-    const renderer = new THREE.WebGLRenderer({alpha: true, antialias: true,});
+    renderer = new THREE.WebGLRenderer({alpha: true, antialias: true});
     renderer.setSize(container.clientWidth, container.clientHeight);
     renderer.autoClear = false;
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio));
+    renderer.setPixelRatio(window.devicePixelRatio * 0.5);
     container.appendChild(renderer.domElement);
 
     const texture = new THREE.TextureLoader().load("./js/src/texture/texture-SR.png");
     const geometry = new THREE.SphereGeometry(1, 80, 80);
     const material = new THREE.MeshStandardMaterial({map: texture, wireframe: false});
-    const mesh = new THREE.Mesh(geometry, material);
+    mesh = new THREE.Mesh(geometry, material);
     mesh.receiveShadow = true
     mesh.position.y = 3
     mesh.rotation.x = 0
@@ -47,27 +52,6 @@ document.body.onload = () => {
     directionalLight.position.set(15, 5, 5);
     scene.add(directionalLight, ambientLight);
 
-    function render() {
-        renderer.clear();
-        renderer.render(scene, camera);
-    }
-
-    function animate() {
-
-        requestAnimationFrame(animate);
-        mesh.rotation.y += 0.0005;
-        onWindowResize()
-        render();
-    }
-
-    function onWindowResize() {
-
-        camera.aspect = window.innerWidth / window.innerHeight;
-        camera.updateProjectionMatrix();
-        renderer.setSize(window.innerWidth, window.innerHeight);
-    }
-    document.body.onresize = onWindowResize
-
     let prevScroll = window.scrollY
     function rotateMesh() {
         const currentScroll = window.scrollY
@@ -81,5 +65,24 @@ document.body.onload = () => {
     }
     window.addEventListener('scroll', rotateMesh)
 
-    animate();
+}
+
+function render() {
+    renderer.clear();
+    renderer.render(scene, camera);
+}
+
+function onWindowResize() {
+
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+}
+document.body.onresize = onWindowResize
+
+function animate() {
+    requestAnimationFrame(animate);
+    mesh.rotation.y += 0.0005;
+    onWindowResize()
+    render();
 }
